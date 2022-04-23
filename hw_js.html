@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="./hw_js_4_stars.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let age_2 = 18
+    let age_3 = 60
+    const checkAge = function(age) {
+    // console.log(`Your age is - ` + age + `, and`)
+//     age = Number(age)
+// if (!isNaN(age)) { подсказка Анатолия
+        // if (Number(age)) {
+    if (+age) { //подсказка Анатолия
+
+        if (age < age_2) {
+                alert("You don’t have access cause your age is " + age + ". It’s less then")
+                checkAge(prompt("Нave you grown up?"))
+            } else if (age >= age_2 && age < age_3) {
+                    alert(`Welcome !`)
+            } else if (age > age_3) {
+                    alert(`Keep calm and look Culture channel`)
+        } else {
+                alert("Technical work") 
+        }      
+    } else {
+        alert("Not integer value") 
+        checkAge(prompt("What is Your age ?"))
+    }
+}
+checkAge(prompt("What is Your age ?")) // Подсказка с разбора ДЗ
+</script>
+</body>
+</html>
